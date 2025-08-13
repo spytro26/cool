@@ -8,12 +8,14 @@ import { AppContext } from '@/context/AppContext';
 
 export default function ProductScreen() {
   const { roomData, setRoomData, unitSettings } = useContext(AppContext);
+  const { ColdRoomCalculator } = require('@/utils/calculations');
 
   const updateRoomData = (field: string, value: any) => {
     setRoomData(prev => ({ ...prev, [field]: value }));
   };
 
   const selectedProduct = products.find(p => p.id === roomData.product);
+  const maxStorageCapacity = ColdRoomCalculator.calculateMaxStorageCapacity(roomData);
   const weightUnit = unitSettings.weight === 'kg' ? 'kg' : 'lb';
   const tempUnit = unitSettings.temperature === 'celsius' ? '°C' : 
                    unitSettings.temperature === 'fahrenheit' ? '°F' : 'K';
@@ -49,13 +51,19 @@ export default function ProductScreen() {
             <View style={styles.infoRow}>
               <Text style={styles.infoLabel}>Max. allowed storage</Text>
               <Text style={styles.infoValue}>
-                {selectedProduct.maxAllowedStorage.toFixed(2)} {weightUnit}
+                {maxStorageCapacity.toFixed(2)} {weightUnit}
               </Text>
             </View>
             <View style={styles.infoRow}>
               <Text style={styles.infoLabel}>Recomm. storage temp.</Text>
               <Text style={styles.infoValue}>
                 {selectedProduct.recommendedTemp.toFixed(2)} {tempUnit}
+              </Text>
+            </View>
+            <View style={styles.infoRow}>
+              <Text style={styles.infoLabel}>Product density</Text>
+              <Text style={styles.infoValue}>
+                {selectedProduct.density} kg/m³
               </Text>
             </View>
           </View>

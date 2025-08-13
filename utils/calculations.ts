@@ -2,6 +2,17 @@ import { RoomData, CalculationResult } from '@/types';
 import { products, insulationMaterials } from '@/data/products';
 
 export class ColdRoomCalculator {
+  static calculateMaxStorageCapacity(roomData: RoomData): number {
+    const product = products.find(p => p.id === roomData.product);
+    if (!product) return 0;
+    
+    const roomVolume = roomData.length * roomData.width * roomData.height;
+    const storageEfficiency = 0.7; // 70% of room volume can be used for storage
+    const maxCapacity = roomVolume * product.density * storageEfficiency;
+    
+    return maxCapacity;
+  }
+
   static calculateCoolingLoad(data: RoomData): CalculationResult {
     // Get insulation material properties
     const insulationMaterial = insulationMaterials.find(

@@ -5,7 +5,7 @@ export const products: Product[] = [
     id: 'dairy-butter',
     name: 'Dairy butter',
     category: 'dairy',
-    maxAllowedStorage: 48000,
+    density: 920, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 2.9
   },
@@ -13,7 +13,7 @@ export const products: Product[] = [
     id: 'dairy-cheese-fat',
     name: 'Dairy cheese fat',
     category: 'dairy',
-    maxAllowedStorage: 45000,
+    density: 1100, // kg/m³
     recommendedTemp: 4.0,
     specificHeat: 3.1
   },
@@ -21,7 +21,7 @@ export const products: Product[] = [
     id: 'dairy-cheese-lean',
     name: 'Dairy cheese lean',
     category: 'dairy',
-    maxAllowedStorage: 42000,
+    density: 1200, // kg/m³
     recommendedTemp: 4.0,
     specificHeat: 3.4
   },
@@ -29,7 +29,7 @@ export const products: Product[] = [
     id: 'dairy-curd',
     name: 'Dairy curd',
     category: 'dairy',
-    maxAllowedStorage: 40000,
+    density: 1050, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 3.6
   },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     id: 'dairy-margarine',
     name: 'Dairy margarine',
     category: 'dairy',
-    maxAllowedStorage: 46000,
+    density: 800, // kg/m³
     recommendedTemp: 5.0,
     specificHeat: 2.8
   },
@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: 'dairy-mean-value',
     name: 'Dairy mean value',
     category: 'dairy',
-    maxAllowedStorage: 44000,
+    density: 1000, // kg/m³
     recommendedTemp: 3.0,
     specificHeat: 3.2
   },
@@ -53,7 +53,7 @@ export const products: Product[] = [
     id: 'dairy-milk',
     name: 'Dairy milk',
     category: 'dairy',
-    maxAllowedStorage: 41000,
+    density: 1030, // kg/m³
     recommendedTemp: 4.0,
     specificHeat: 3.9
   },
@@ -61,7 +61,7 @@ export const products: Product[] = [
     id: 'fish-mean-value',
     name: 'Fish mean value',
     category: 'fish',
-    maxAllowedStorage: 35000,
+    density: 1000, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.7
   },
@@ -69,7 +69,7 @@ export const products: Product[] = [
     id: 'fish-sea-fish-fat',
     name: 'Fish sea-fish fat',
     category: 'fish',
-    maxAllowedStorage: 38000,
+    density: 950, // kg/m³
     recommendedTemp: -1.0,
     specificHeat: 3.2
   },
@@ -77,7 +77,7 @@ export const products: Product[] = [
     id: 'fish-sea-fish-smoked',
     name: 'Fish sea fish smoked',
     category: 'fish',
-    maxAllowedStorage: 32000,
+    density: 800, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 2.8
   },
@@ -85,7 +85,7 @@ export const products: Product[] = [
     id: 'fish-shell-fish',
     name: 'Fish shell-fish',
     category: 'fish',
-    maxAllowedStorage: 30000,
+    density: 900, // kg/m³
     recommendedTemp: 1.0,
     specificHeat: 3.5
   },
@@ -93,7 +93,7 @@ export const products: Product[] = [
     id: 'fruits-pineapple',
     name: 'Fruits pineapple',
     category: 'fruits',
-    maxAllowedStorage: 25000,
+    density: 500, // kg/m³
     recommendedTemp: 7.0,
     specificHeat: 3.8
   },
@@ -101,7 +101,7 @@ export const products: Product[] = [
     id: 'fruits-apple',
     name: 'Fruits apple',
     category: 'fruits',
-    maxAllowedStorage: 28000,
+    density: 600, // kg/m³
     recommendedTemp: 1.0,
     specificHeat: 3.6
   },
@@ -109,7 +109,7 @@ export const products: Product[] = [
     id: 'fruits-apricots',
     name: 'Fruits apricots',
     category: 'fruits',
-    maxAllowedStorage: 26000,
+    density: 550, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.7
   },
@@ -117,7 +117,7 @@ export const products: Product[] = [
     id: 'fruits-banana',
     name: 'Fruits banana',
     category: 'fruits',
-    maxAllowedStorage: 24000,
+    density: 450, // kg/m³
     recommendedTemp: 13.0,
     specificHeat: 3.3
   },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     id: 'fruits-cherries',
     name: 'Fruits cherries',
     category: 'fruits',
-    maxAllowedStorage: 27000,
+    density: 650, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.8
   },
@@ -133,7 +133,7 @@ export const products: Product[] = [
     id: 'fruits-grapes',
     name: 'Fruits grapes',
     category: 'fruits',
-    maxAllowedStorage: 29000,
+    density: 700, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.5
   },
@@ -141,7 +141,7 @@ export const products: Product[] = [
     id: 'fruits-mangos',
     name: 'Fruits mangos',
     category: 'fruits',
-    maxAllowedStorage: 26000,
+    density: 600, // kg/m³
     recommendedTemp: 10.0,
     specificHeat: 3.4
   },
@@ -149,7 +149,7 @@ export const products: Product[] = [
     id: 'fruits-mean-value',
     name: 'Fruits mean value',
     category: 'fruits',
-    maxAllowedStorage: 26500,
+    density: 575, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 3.6
   },
@@ -157,7 +157,7 @@ export const products: Product[] = [
     id: 'fruits-melons',
     name: 'Fruits melons',
     category: 'fruits',
-    maxAllowedStorage: 25500,
+    density: 400, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 3.9
   },
@@ -165,7 +165,7 @@ export const products: Product[] = [
     id: 'beer',
     name: 'Beer',
     category: 'beverages',
-    maxAllowedStorage: 50000,
+    density: 1000, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 4.0
   },
@@ -173,7 +173,7 @@ export const products: Product[] = [
     id: 'bread',
     name: 'Bread',
     category: 'bakery',
-    maxAllowedStorage: 20000,
+    density: 300, // kg/m³
     recommendedTemp: -18.0,
     specificHeat: 2.5
   },
@@ -181,7 +181,7 @@ export const products: Product[] = [
     id: 'chocolate',
     name: 'Chocolate',
     category: 'confectionery',
-    maxAllowedStorage: 15000,
+    density: 1200, // kg/m³
     recommendedTemp: 15.0,
     specificHeat: 1.8
   },
@@ -189,7 +189,7 @@ export const products: Product[] = [
     id: 'cut-flowers',
     name: 'Cut flowers',
     category: 'flowers',
-    maxAllowedStorage: 5000,
+    density: 100, // kg/m³
     recommendedTemp: 2.0,
     specificHeat: 3.8
   },
@@ -197,7 +197,7 @@ export const products: Product[] = [
     id: 'dough',
     name: 'Dough',
     category: 'bakery',
-    maxAllowedStorage: 18000,
+    density: 500, // kg/m³
     recommendedTemp: 4.0,
     specificHeat: 3.2
   },
@@ -205,7 +205,7 @@ export const products: Product[] = [
     id: 'eggs',
     name: 'Eggs',
     category: 'dairy',
-    maxAllowedStorage: 22000,
+    density: 400, // kg/m³
     recommendedTemp: 1.0,
     specificHeat: 3.1
   },
@@ -213,7 +213,7 @@ export const products: Product[] = [
     id: 'ice-cream',
     name: 'Ice cream',
     category: 'frozen',
-    maxAllowedStorage: 35000,
+    density: 600, // kg/m³
     recommendedTemp: -18.0,
     specificHeat: 2.2
   },
@@ -221,7 +221,7 @@ export const products: Product[] = [
     id: 'meat-chicken',
     name: 'Meat chicken',
     category: 'meat',
-    maxAllowedStorage: 38000,
+    density: 950, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.3
   },
@@ -229,7 +229,7 @@ export const products: Product[] = [
     id: 'vegetables-beans',
     name: 'Vegetables beans',
     category: 'vegetables',
-    maxAllowedStorage: 30000,
+    density: 800, // kg/m³
     recommendedTemp: 4.0,
     specificHeat: 3.5
   },
@@ -237,7 +237,7 @@ export const products: Product[] = [
     id: 'vegetables-cabbage',
     name: 'Vegetables cabbage',
     category: 'vegetables',
-    maxAllowedStorage: 32000,
+    density: 500, // kg/m³
     recommendedTemp: 0.0,
     specificHeat: 3.7
   }

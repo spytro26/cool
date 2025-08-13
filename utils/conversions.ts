@@ -110,4 +110,47 @@ export class UnitConverter {
     
     return kw;
   }
+
+  // Convert weight based on unit setting
+  static convertWeight(value: number, from: string, to: string): number {
+    if (from === to) return value;
+    
+    // Convert to kg first
+    let kg = value;
+    if (from === 'pound') {
+      kg = this.poundToKg(value);
+    }
+
+    // Convert from kg to target unit
+    if (to === 'pound') {
+      return this.kgToPound(kg);
+    }
+    
+    return kg;
+  }
+
+  // Convert distance based on unit setting
+  static convertDistance(value: number, from: string, to: string): number {
+    if (from === to) return value;
+    
+    // For large distances (meter/foot)
+    if ((from === 'meter' || from === 'foot') && (to === 'meter' || to === 'foot')) {
+      if (from === 'foot' && to === 'meter') {
+        return this.footToMeter(value);
+      } else if (from === 'meter' && to === 'foot') {
+        return this.meterToFoot(value);
+      }
+    }
+    
+    // For small distances (mm/inch)
+    if ((from === 'millimeter' || from === 'inch') && (to === 'millimeter' || to === 'inch')) {
+      if (from === 'inch' && to === 'millimeter') {
+        return this.inchToMm(value);
+      } else if (from === 'millimeter' && to === 'inch') {
+        return this.mmToInch(value);
+      }
+    }
+    
+    return value;
+  }
 }

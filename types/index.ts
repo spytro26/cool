@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   category: string;
-  maxAllowedStorage: number; // in kg
+  density: number; // kg/m³
   recommendedTemp: number; // in Celsius
   specificHeat: number; // kJ/kg·K
 }
