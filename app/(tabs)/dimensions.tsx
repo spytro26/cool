@@ -79,6 +79,16 @@ export default function DimensionsScreen() {
           onSelect={(value) => updateRoomData('floorInsulation', value === 'true')}
           placeholder="No"
         />
+
+        {roomData.floorInsulation && (
+          <InputField
+            label="Floor thickness"
+            value={roomData.floorThickness.toString()}
+            onChangeText={(text) => updateRoomData('floorThickness', parseFloat(text) || 0)}
+            unit={thicknessUnit}
+            placeholder="2.0"
+          />
+        )}
       </ScrollView>
     </LinearGradient>
   );

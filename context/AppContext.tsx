@@ -27,6 +27,7 @@ export function AppProvider({ children }: AppProviderProps) {
     insulationMaterial: 'polystyrene',
     thickness: 5.91,
     floorInsulation: false,
+    floorThickness: 2.0,
     product: 'dairy-butter',
     storageQuantity: 15000.00,
     stockShift: 1500.00,

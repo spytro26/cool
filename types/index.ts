@@ -5,6 +5,7 @@ export interface Product {
   density: number; // kg/m³
   recommendedTemp: number; // in Celsius
   specificHeat: number; // kJ/kg·K
+  respirationHeat: number; // W/kg
 }
 
 export interface UnitSettings {
@@ -29,6 +30,8 @@ export interface RoomData {
   insulationMaterial: string;
   thickness: number;
   floorInsulation: boolean;
+  floorThickness: number;
+  floorThickness: number;
   product: string;
   storageQuantity: number;
   stockShift: number;
@@ -49,6 +52,7 @@ export interface CalculationResult {
   ventilationLosses: number;
   otherHeatSources: number;
   coolingDown: number;
+  respirationHeat: number;
   subtotal: number;
   requiredCapacity: number;
   totalSpecificCapacity: number;

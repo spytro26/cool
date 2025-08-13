@@ -52,6 +52,11 @@ export default function CalculateScreen() {
             <Text style={styles.resultValue}>{results.coolingDown.toFixed(2)} W</Text>
           </View>
 
+          <View style={styles.resultRow}>
+            <Text style={styles.resultLabel}>Respiration</Text>
+            <Text style={styles.resultValue}>{results.respirationHeat.toFixed(2)} W</Text>
+          </View>
+
           <View style={[styles.resultRow, styles.subtotalRow]}>
             <Text style={styles.subtotalLabel}>Subtotal</Text>
             <Text style={styles.subtotalValue}>{results.subtotal.toFixed(2)} W</Text>
