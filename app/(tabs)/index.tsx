@@ -29,8 +29,8 @@ export default function GeneralScreen() {
       <StatusBar barStyle="light-content" />
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.logo}>LU-VE</Text>
-          <Text style={styles.logoSubtext}>GROUP</Text>
+          <Text style={styles.logo}>ENZO</Text>
+          <Text style={styles.logoSubtext}>COMPLETE SOLUTION FOR COLD CHAIN REQUIREMENT</Text>
           <Text style={styles.title}>Cold Room Calculator</Text>
         </View>
 
@@ -100,10 +100,12 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   logoSubtext: {
-    fontSize: 14,
+    fontSize: 10,
     color: '#FFFFFF',
-    letterSpacing: 4,
+    letterSpacing: 1,
     marginBottom: 20,
+    textAlign: 'center',
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 22,

@@ -15,7 +15,6 @@ export interface UnitSettings {
   distanceLarge: 'foot' | 'meter';
   weight: 'kg' | 'pound';
   system: 'si' | 'imperial';
-  language: 'english';
 }
 
 export interface RoomData {

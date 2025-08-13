@@ -50,7 +50,6 @@ export function AppProvider({ children }: AppProviderProps) {
     distanceLarge: 'foot',
     weight: 'kg',
     system: 'si',
-    language: 'english',
   });
 
   return (
